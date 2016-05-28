@@ -1,8 +1,12 @@
 def Main():
-	words = ["cat","sat","bat", "map"]
-	with open("words.txt", "w") as f:
-		for word in words:
-			f.write(word + '\n')
+	try:
+		f = open(input("What file would you like to open? "), "r")
+		for line in f:
+			print(line, end="")
+	except:
+		print("File was not found")
+	
+	
 	
 if __name__ == "__main__":
 	Main()
